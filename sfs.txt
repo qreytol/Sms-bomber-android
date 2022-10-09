@@ -1,14 +1,14 @@
-!pip install buildozer
+pip install buildozer
 
-!pip install cython==0.29.19
+pip install cython==0.29.19
  
-!pip install kivymd
+pip install kivymd
 
-!pip install python-for-android
+pip install python-for-android
 
-!sudo apt install lld
+sudo apt install lld
 
-!sudo apt-get install -y \
+sudo apt-get install -y \
     python3-pip \
     build-essential \
     git \
@@ -25,19 +25,19 @@
     libavcodec-dev \
     zlib1g-dev
 
-!sudo apt-get install -y \
+sudo apt-get install -y \
     libgstreamer1.0 \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good
 
-!sudo apt-get install build-essential libsqlite3-dev sqlite3 bzip2 libbz2-dev 
+sudo apt-get install build-essential libsqlite3-dev sqlite3 bzip2 libbz2-dev 
 zlib1g-dev libssl-dev openssl libgdbm-dev libgdbm-compat-dev liblzma-dev 
 libreadline-dev libncursesw5-dev libffi-dev uuid-dev libffi6
 
-!sudo apt-get install libffi-dev
+sudo apt-get install libffi-dev
 
-!buildozer init
+buildozer init
 
-!buildozer -v android debug deploy run
+buildozer -v android debug deploy run
 
-!buildozer android clean
+buildozer android clean
