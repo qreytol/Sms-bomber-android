@@ -1,0 +1,71 @@
+<MainTest>:
+    FloatLayout:
+
+        canvas:
+            Color:
+                rgb: .09, .10, .10
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Label:
+            text: 'Sms bomber'
+            pos_hint: {'center_x':0.5,'y':0.45}
+            halign: 'right'
+            valign: 'middle'
+            background_color: 1, 0, 0, 1
+
+        Image:
+
+            source: 'logo\logo.png'
+            size: 20,20
+            pos: (0, 80)
+    
+        TextInput:
+
+            input_filter: 'int'
+            size_hint:(.243, .057)
+            background_color: 0,0,0,0
+            foreground_color: 1,1,1,1
+            pos_hint: {'center_x':.484,'center_y':.428}
+            id: phone
+            multiline:False
+            on_text_validate:root.press()
+            hint_text:'Введіть номер'
+        
+        Button:
+            text: 'Запустити'
+            pos_hint: {'center_x':.49,'center_y':.34}
+            size_hint: .16, .06
+            on_press: root.press()
+
+        Label:
+            text: '+'
+            pos_hint: {'center_x':.361,'center_y':.43}
+            width: 20
+            height: 20
+
+        Image:
+            source: 'logo\полоска.png'
+            size: 20,20
+            pos: 15, -178
+
+        Label:
+            id: start_bomb
+            text:''
+
+        Label:
+            pos:(0,-130)
+            id: operator
+            text: ''
+
+        Label:
+            pos:(0,-160)
+            id: country
+            text:''
+
+        Label:
+            pos:(0,-190)
+            id: geo
+            text:''
+
