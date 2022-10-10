@@ -1,0 +1,25 @@
+<MainTest>:
+    MDScreen:
+        MDFloatLayout:
+            md_bg_color:app.theme_cls.primary_color
+            MDLabel:
+                text:'hello'
+                halign:"center"
+                pos_hint: {'x':.1}
+
+
+
+from kivymd.app import MDApp
+from kivymd.uix.screen import MDScreen
+from kivy.lang import Builder
+
+class MainTest(MDScreen):
+    a = Builder.load_file('first copy.kv')
+        
+        
+
+class FirstApp(MDApp):
+    def build(self):
+        return MainTest()
+
+FirstApp().run()
