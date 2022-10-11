@@ -5,37 +5,37 @@
                 id: start_spam_info
                 text:''
                 halign: 'center'
-                pos_hint: {'center_y':.55}
+                pos_hint: {'center_y':.6}
             
             MDCard:
                 size_hint: None, None
-                pos_hint: {'center_x':.5,'center_y':.7}
+                pos_hint: {'center_x':.5,'center_y':.75}
                 md_bg_color: 0,0,0,0
 
                 FitImage:
-                    source: 'logo\logo.png'
+                    source: 'logo.png'
 
             MDTextField:
                 id: enter_phone
                 hint_text: 'Введіть номер'
-                size_hint: .22,None
+                size_hint: .38,None
                 helper_text: 'Приклад: 380000000000'
                 helper_text_mode: 'on_focus'
                 mode: 'rectangle'
-                pos_hint: {'center_x':.36, 'center_y':.47}
+                pos_hint: {'center_x':.3, 'center_y':.52}
 
             MDTextField:
                 id: minutes
                 hint_text: 'Хвилин'
-                pos_hint: {'center_x':.57, 'center_y':.47}
+                pos_hint: {'center_x':.67, 'center_y':.52}
                 mode: 'rectangle'
                 helper_text: 'Вводи НЕ більше 10'
                 helper_text_mode: 'on_focus'
-                size_hint: .15,None
+                size_hint: .24,None
 
             MDRaisedButton:
                 text:'Запустити спам'
-                pos_hint: {'center_x':.75, 'center_y':.464}
+                pos_hint: {'center_x':.5, 'center_y':.41}
                 size_hint: None,.084
                 on_press: root.start_spam()
 
@@ -43,19 +43,19 @@
                 id: operator
                 text: ''
                 halign: 'center'
-                pos_hint: {'center_y':0.35}
+                pos_hint: {'center_y':0.33}
 
             MDLabel:
                 id: country
                 text:''
                 halign: 'center'
-                pos_hint: {'center_y':0.28}
+                pos_hint: {'center_y':0.26}
 
             MDLabel:
                 id: geo
                 text:''
                 halign:'center'
-                pos_hint: {'center_y':0.21}
+                pos_hint: {'center_y':0.19}
 
 
 
