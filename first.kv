@@ -1,71 +1,66 @@
 <MainTest>:
-    FloatLayout:
+    MDScreen:
+        MDFloatLayout:
+            MDLabel:
+                id: start_spam_info
+                text:''
+                halign: 'center'
+                pos_hint: {'center_y':.55}
+            
+            MDCard:
+                size_hint: None, None
+                pos_hint: {'center_x':.5,'center_y':.7}
+                md_bg_color: 0,0,0,0
 
-        canvas:
-            Color:
-                rgb: .09, .10, .10
-            Rectangle:
-                size: self.size
-                pos: self.pos
+                FitImage:
+                    source: 'logo\logo.png'
 
-        Label:
-            text: 'Sms bomber'
-            pos_hint: {'center_x':0.5,'y':0.45}
-            halign: 'right'
-            valign: 'middle'
-            background_color: 1, 0, 0, 1
+            MDTextField:
+                id: enter_phone
+                hint_text: 'Введіть номер'
+                size_hint: .22,None
+                helper_text: 'Приклад: 380000000000'
+                helper_text_mode: 'on_focus'
+                mode: 'rectangle'
+                pos_hint: {'center_x':.36, 'center_y':.47}
 
-        Image:
+            MDTextField:
+                id: minutes
+                hint_text: 'Хвилин'
+                pos_hint: {'center_x':.57, 'center_y':.47}
+                mode: 'rectangle'
+                helper_text: 'Вводи НЕ більше 10'
+                helper_text_mode: 'on_focus'
+                size_hint: .15,None
 
-            source: 'logo\logo.png'
-            size: 20,20
-            pos: (0, 80)
-    
-        TextInput:
+            MDRaisedButton:
+                text:'Запустити спам'
+                pos_hint: {'center_x':.75, 'center_y':.464}
+                size_hint: None,.084
+                on_press: root.start_spam()
 
-            input_filter: 'int'
-            size_hint:(.243, .057)
-            background_color: 0,0,0,0
-            foreground_color: 1,1,1,1
-            pos_hint: {'center_x':.484,'center_y':.428}
-            id: phone
-            multiline:False
-            on_text_validate:root.press()
-            hint_text:'Введіть номер'
-        
-        Button:
-            text: 'Запустити'
-            pos_hint: {'center_x':.49,'center_y':.34}
-            size_hint: .16, .06
-            on_press: root.press()
+            MDLabel:
+                id: operator
+                text: ''
+                halign: 'center'
+                pos_hint: {'center_y':0.35}
 
-        Label:
-            text: '+'
-            pos_hint: {'center_x':.361,'center_y':.43}
-            width: 20
-            height: 20
+            MDLabel:
+                id: country
+                text:''
+                halign: 'center'
+                pos_hint: {'center_y':0.28}
 
-        Image:
-            source: 'logo\полоска.png'
-            size: 20,20
-            pos: 15, -178
+            MDLabel:
+                id: geo
+                text:''
+                halign:'center'
+                pos_hint: {'center_y':0.21}
 
-        Label:
-            id: start_bomb
-            text:''
 
-        Label:
-            pos:(0,-130)
-            id: operator
-            text: ''
 
-        Label:
-            pos:(0,-160)
-            id: country
-            text:''
+#cog
+#pencil
 
-        Label:
-            pos:(0,-190)
-            id: geo
-            text:''
+
 
