@@ -5,7 +5,7 @@ import bomber
 from get_info.get_information import get_information
 
 class MainTest(MDScreen):
-    a = Builder.load_file('first copy.kv')
+    a = Builder.load_file('first.kv')
     def start_spam(self):
         get_phone = self.ids.enter_phone.text
         get_minutes = self.ids.minutes.text
