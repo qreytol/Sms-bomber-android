@@ -5,7 +5,6 @@ import bomber
 from get_info.get_information import get_information
 
 class MainTest(MDScreen):
-    a = Builder.load_file('first.kv')
     def start_spam(self):
         get_phone = self.ids.enter_phone.text
         get_minutes = self.ids.minutes.text
@@ -27,10 +26,11 @@ class MainTest(MDScreen):
             self.ids.country.text = f'Країна: {get_inf[1]}'
             self.ids.geo.text = f'Приблизна геолокація: {get_inf[2][0]}'
         
-            bomber.start(get_phone,get_minutes)
+            #bomber.start(get_phone,get_minutes)
         
 class FirstApp(MDApp):
     def build(self):
+        self.icon = 'logo.png'
         self.theme_cls.theme_style = 'Dark'
         return MainTest()
 
